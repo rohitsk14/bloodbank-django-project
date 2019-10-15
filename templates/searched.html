@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<h1>search result</h1><br>
+    <h3>
+        {% if name %}
+                Name of donor : {{name}}<br>
+                Mobile No. : {{mob}}<br>
+        {% else %}
+                No Donors found<br>
+        {% endif %}
+    </h3>
+
+{% endblock %}

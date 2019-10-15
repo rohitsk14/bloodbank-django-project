@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+
+    <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <h3>Generate Request</h3>
+                {{form|crispy}}
+            </fieldset>
+            <div class="form-group">
+                <button type="submit" class="btn btn-dark">Request</button>
+            </div>
+    </form>
+
+{% endblock %}
